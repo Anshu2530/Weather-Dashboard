@@ -1,4 +1,5 @@
-const OPEN_WEATHER_API_KEY = "833f628abfa83bd38571b51eda543810";
+const OPEN_WEATHER_API_KEY = "const OPEN_WEATHER_API_KEY = import.meta.env.VITE_WEATHER_API_KEY";
+
 const BASE_URL = "https://api.openweathermap.org/data/2.5";
 
 const selectors = {
