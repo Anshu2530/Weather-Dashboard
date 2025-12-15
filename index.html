@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>Weather Dashboard</h1>
+      <p class="subtitle">Search any city to see current conditions and 5‑day forecast.</p>
+    </header>
+
+    <main class="app-main">
+      <section class="controls" aria-label="Weather search and preferences">
+        <form id="search-form" class="search-form" autocomplete="off">
+          <label for="city-input" class="visually-hidden">City name</label>
+          <input
+            id="city-input"
+            name="city"
+            type="text"
+            placeholder="Enter city (e.g. London, Tokyo)"
+            required
+          />
+          <button type="submit">Search</button>
+        </form>
+
+        <section class="prefs" aria-label="Preferences">
+          <div class="toggle-group" role="radiogroup" aria-label="Temperature unit">
+            <button type="button" class="toggle-button active" data-unit="metric">
+              °C
+            </button>
+            <button type="button" class="toggle-button" data-unit="imperial">
+              °F
+            </button>
+          </div>
+
+          <div class="favorites">
+            <h2 class="section-title">Favorite cities</h2>
+            <ul id="favorites-list" class="favorites-list" aria-label="Favorite cities"></ul>
+          </div>
+        </section>
+      </section>
+
+      <section class="status" aria-live="polite">
+        <div id="loading" class="status-message" hidden>Loading weather...</div>
+        <div id="error" class="status-message error" hidden></div>
+      </section>
+
+      <section class="weather-layout">
+        <section id="current-weather" class="panel" aria-label="Current weather"></section>
+        <section id="forecast" class="panel" aria-label="5-day forecast"></section>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>
+        Data from
+        <a href="https://openweathermap.org/api" target="_blank" rel="noreferrer">
+          OpenWeatherMap API
+        </a>
+      </p>
+    </footer>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
+
+
