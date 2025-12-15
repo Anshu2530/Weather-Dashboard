@@ -39,8 +39,6 @@ week5/
 └─ README.md        # This file
 ```
 
-> Note: Earlier we experimented with `css/` and `js/` subfolders, but the final setup keeps everything at the project root for simplicity.
-
 ## Getting started
 
 ### 1. Get an OpenWeatherMap API key
@@ -79,23 +77,39 @@ If you see an error like **“Could not fetch weather data”**, verify:
 - The key is active (try this URL in the browser, replacing `YOUR_KEY`):
   `https://api.openweathermap.org/data/2.5/weather?q=London&appid=YOUR_KEY&units=metric`
 
-## Mapping to the 7‑day learning plan
+### Learning Outcomes
 
-- **Day 1 – API Fundamentals**: Study how `BASE_URL` and query parameters are used in `fetchJSON` and `fetchWeatherByCity`.
-- **Day 2 – Async JavaScript**: Look at all functions using `async/await` (`fetchJSON`, `loadAndRender`, geolocation handling).
-- **Day 3 – API Integration**: See how `/weather` and `/forecast` are fetched in parallel with `Promise.all`.
-- **Day 4 – Data Display**: Follow how JSON data is transformed into HTML in `renderCurrentWeather` and `renderForecast`.
-- **Day 5 – Local Storage**: Examine the `loadPreferences` / `savePreferences` helpers and where they’re called.
-- **Day 6 – Advanced Features**: Explore search, favorites, unit switching, and geolocation logic.
-- **Day 7 – Polish & Deploy**: Review loading states, error messages, responsive CSS, and then deploy via GitHub Pages, Netlify, or Vercel.
+1. Working with third-party APIs
 
-## Deployment (optional)
+2. Handling async JavaScript (fetch, promises)
 
-Because this is a static frontend app (HTML/CSS/JS only), you can deploy it easily:
+3. Managing application state with LocalStorage
 
-- **GitHub Pages**: Push the folder to a repo and enable Pages on the `main` branch.
-- **Netlify / Vercel**: Drag‑and‑drop the folder or connect the GitHub repo.
+4. Deploying projects using Vercel
 
+5. GitHub & Vercel CI/CD workflow
+
+## Deployment 
+
+1. The project is deployed using Vercel with GitHub integration.
+
+2. Every push to the main branch automatically triggers a new deployment.
+
+3. The application is hosted as a static site and served globally via Vercel CDN.
+   
 Once deployed, remember to keep your API key safe (for learning it’s fine, but for production you would normally use a backend proxy). 
 
+### Live Demo
 
+👉 Live Website: https://weather-dashboard-ofoze5lku-anshu-kumaris-projects-66275c81.vercel.app
+
+👉 GitHub Repository: https://github.com/Anshu2530/Weather-Dashboard
+
+### Author
+
+Anshu Kumari
+GitHub: https://github.com/Anshu2530
+
+⭐ Support
+
+If you like this project, please ⭐ the repository. It helps and motivates me to build more projects 😊
